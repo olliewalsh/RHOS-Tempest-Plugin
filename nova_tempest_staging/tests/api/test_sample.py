@@ -12,9 +12,10 @@
 #    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 #    License for the specific language governing permissions and limitations
 #    under the License.
-from nova_tempest_staging.tests.api import base
-from tempest import test
 from tempest import config
+from tempest import test
+
+from nova_tempest_staging.tests.api import base
 
 
 CONF = config.CONF

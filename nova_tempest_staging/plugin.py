@@ -16,10 +16,7 @@
 
 import os
 
-from tempest import config
 from tempest.test_discover import plugins
-
-from nova_tempest_staging import config as project_config
 
 
 class NovaTempestStaging(plugins.TempestPlugin):
