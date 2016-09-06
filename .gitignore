@@ -4,3 +4,4 @@ build
 .eggs
 .testrepository
 .tox
+test_sample.py
