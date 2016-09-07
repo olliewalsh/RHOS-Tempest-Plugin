@@ -12,5 +12,19 @@
 #    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 #    License for the specific language governing permissions and limitations
 #    under the License.
+from oslo_config import cfg
 
-a = 1
+whitebox_plugin_group = cfg.OptGroup(name="whitebox_plugin",
+                                     title="Whitebox config options")
+
+WhiteboxPluginGroup = [
+    cfg.StrOpt("db_hostname",
+               default="127.0.0.1",
+               help="Address of the database"),
+    cfg.StrOpt("db_username",
+               help="Username for the database connection."),
+    cfg.StrOpt("db_password",
+               help="Password for the database connection."),
+    cfg.StrOpt("db_database",
+               help="The database name for the database connection."),
+]
