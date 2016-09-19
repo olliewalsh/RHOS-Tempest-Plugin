@@ -19,7 +19,6 @@ whitebox_plugin_group = cfg.OptGroup(name="whitebox_plugin",
 
 WhiteboxPluginGroup = [
     cfg.StrOpt("db_hostname",
-               default="127.0.0.1",
                help="Address of the database"),
     cfg.StrOpt("db_username",
                help="Username for the database connection."),

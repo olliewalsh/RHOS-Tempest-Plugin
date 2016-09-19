@@ -17,14 +17,14 @@
 from tempest import config
 from tempest.lib.cli import base as clibase
 
-from nova_tempest_staging.tests.api import base
-from nova_tempest_staging.whitebox.mysql import default_client as dbclient
+from tempest_whitebox_plugin.tests.api import base
+from tempest_whitebox_plugin.whitebox.mysql import default_client as dbclient
 
 
 CONF = config.CONF
 
 
-class NovaManageTest(base.BaseNovaTempestStaging):
+class NovaManageTest(base.BaseTempestWhiteboxPlugin):
     """nova-manage related tests
 
     These tests require to be run as root on the controller node

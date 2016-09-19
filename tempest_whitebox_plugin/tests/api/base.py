@@ -25,7 +25,7 @@ CONF = config.CONF
 LOG = logging.getLogger(__name__)
 
 
-class BaseNovaTempestStaging(test.BaseTestCase):
+class BaseTempestWhiteboxPlugin(test.BaseTestCase):
     """Base test case class for Nova Staging tests."""
 
     credentials = ['primary']
@@ -36,7 +36,7 @@ class BaseNovaTempestStaging(test.BaseTestCase):
 
     @classmethod
     def setup_clients(cls):
-        super(BaseNovaTempestStaging, cls).setup_clients()
+        super(BaseTempestWhiteboxPlugin, cls).setup_clients()
         cls.servers_client = cls.os.servers_client
         cls.server_groups_client = cls.os.server_groups_client
         cls.flavors_client = cls.os.flavors_client
@@ -71,7 +71,7 @@ class BaseNovaTempestStaging(test.BaseTestCase):
 
     @classmethod
     def resource_setup(cls):
-        super(BaseNovaTempestStaging, cls).resource_setup()
+        super(BaseTempestWhiteboxPlugin, cls).resource_setup()
         cls.build_interval = CONF.compute.build_interval
         cls.build_timeout = CONF.compute.build_timeout
         cls.image_ref = CONF.compute.image_ref
@@ -89,7 +89,7 @@ class BaseNovaTempestStaging(test.BaseTestCase):
     @classmethod
     def setup_credentials(cls):
         cls.set_network_resources()
-        super(BaseNovaTempestStaging, cls).setup_credentials()
+        super(BaseTempestWhiteboxPlugin, cls).setup_credentials()
 
     @classmethod
     def resource_cleanup(cls):
@@ -97,7 +97,7 @@ class BaseNovaTempestStaging(test.BaseTestCase):
         cls.clear_servers()
         cls.clear_security_groups()
         cls.clear_server_groups()
-        super(BaseNovaTempestStaging, cls).resource_cleanup()
+        super(BaseTempestWhiteboxPlugin, cls).resource_cleanup()
 
     @classmethod
     def clear_servers(cls):
