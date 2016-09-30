@@ -27,6 +27,8 @@ WhiteboxPluginGroup = [
                help="Password for the database connection."),
     cfg.StrOpt("nova_db_database",
                help="The database name for the nova database connection."),
+    cfg.StrOpt("pci_alias",
+               help="PCI alias for SRIOV PCI passthrough functionality"),
 
 
 ]
