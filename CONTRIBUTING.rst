@@ -69,6 +69,50 @@ more info.
 .. _initiate a Pull Request: https://help.github.com/articles/creating-a-pull-request/
 
 
+9. You can now head to https://review.gerrithub.io to check peer
+   reviews on your patch
+
+
+---------------------------------------
+Submitting a new revision of your patch
+---------------------------------------
+
+After review, you may be asked to make changes to your code. Here are
+the steps you should take:
+
+1. Checkout the local branch that holds your patch.
+
+2. Make modifications.
+
+3. Stage the files you just modified.
+
+::
+
+   git add files
+
+4. Commit the staged files using the ``--amend`` flag. This will
+   overwrite your previous commit instead of creating a new one. This
+   will lead your patch to be confined to a single commit. It will
+   make peer review easier as well as produce cleaner, more organized
+   logs. Make sure to update your commit message if needs be.
+
+::
+
+   git commit --amed
+
+5. Now push the commits to the upstream branch. Since you've ammended
+   your commit, you've rewritten history and git will refuse to push
+   the changes by default. You can force it to accept your changes
+   with the ``--force`` flag.
+
+::
+
+   git push --force
+
+The pull request in Github as well as the review in Gerrithub should
+be updated now.
+
+---------------------------------
 If you're not a member of RHOS-QE
 ---------------------------------
 
